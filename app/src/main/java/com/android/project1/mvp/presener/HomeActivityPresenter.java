@@ -11,9 +11,9 @@ import javax.inject.Inject;
  */
 
 public class HomeActivityPresenter implements HomeActivityContract.Presenter {
-    private HomeActivity view;
+    private HomeActivityContract.View view;
 
-    @Inject HomeActivityPresenter(HomeActivity view) {
+    @Inject public HomeActivityPresenter(HomeActivityContract.View view) {
         this.view = view;
     }
 

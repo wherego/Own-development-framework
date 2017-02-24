@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.project1.app.AppApplication;
+import com.android.project1.dagger2.component.AppComponent;
+
 import java.lang.reflect.Field;
 
 /**
@@ -15,7 +18,7 @@ import java.lang.reflect.Field;
  * Created by 赵杰 on 2017/2/23.
  */
 
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
     protected LayoutInflater inflater;
     private View contentView;
     private Context context;
@@ -33,10 +36,13 @@ public class BaseFragment extends Fragment {
         this.inflater = inflater;
         this.container = container;
         onCreateView(savedInstanceState);
+        setupFragmentComponent(AppApplication.get(context).getAppComponent());
         if (contentView == null)
             return super.onCreateView(inflater, container, savedInstanceState);
         return contentView;
     }
+
+    protected abstract void setupFragmentComponent(AppComponent appComponent);
 
     protected void onCreateView(Bundle savedInstanceState) {
 

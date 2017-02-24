@@ -25,7 +25,7 @@ import com.android.project1.R;
  * Created by 赵杰 on 2017/2/23.
  */
 
-public class LazyFragment extends BaseFragment {
+public abstract class LazyFragment extends BaseFragment {
     private boolean isInit = false;//真正要显示的View是否已经被初始化（正常加载）
     private Bundle savedInstanceState;
     public static final String INTENT_BOOLEAN_LAZYLOAD = "intent_boolean_lazyLoad";

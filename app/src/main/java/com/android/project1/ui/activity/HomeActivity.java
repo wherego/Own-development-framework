@@ -1,13 +1,12 @@
 package com.android.project1.ui.activity;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.android.project1.R;
 import com.android.project1.base.BaseActivity;
 import com.android.project1.dagger2.component.AppComponent;
 import com.android.project1.dagger2.component.DaggerHomeComponent;
-import com.android.project1.dagger2.module.HomeModule;
+import com.android.project1.dagger2.module.HomePresenterModule;
 import com.android.project1.mvp.contract.HomeActivityContract;
 import com.android.project1.mvp.presener.HomeActivityPresenter;
 
@@ -39,12 +38,7 @@ public class HomeActivity extends BaseActivity implements HomeActivityContract.V
 
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
-        DaggerHomeComponent
-                .builder()
-                .homeModule(new HomeModule(this))
-                .appComponent(appComponent)
-                .build()
-                .inject(this);
+        DaggerHomeComponent.builder().appComponent(appComponent).homePresenterModule(new HomePresenterModule(this)).build().inject(this);
     }
 
 }

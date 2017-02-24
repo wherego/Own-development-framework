@@ -3,6 +3,7 @@ package com.android.project1.ui.fragment;
 import android.os.Bundle;
 
 import com.android.project1.base.LazyFragment;
+import com.android.project1.dagger2.component.AppComponent;
 
 /**
  * 首页 Fragment
@@ -14,5 +15,10 @@ public class HomeFragment extends LazyFragment {
     protected void onCreateViewLazy(Bundle savedInstanceState) {
         super.onCreateViewLazy(savedInstanceState);
 //        setContentView();
+    }
+
+    @Override
+    protected void setupFragmentComponent(AppComponent appComponent) {
+
     }
 }
