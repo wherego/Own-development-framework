@@ -1,9 +1,8 @@
 package com.android.project1.mvp.presener;
 
-import com.android.project1.mvp.contract.HomeActivityContract;
-import com.android.project1.ui.activity.HomeActivity;
+import android.util.Log;
 
-import javax.inject.Inject;
+import com.android.project1.mvp.contract.HomeActivityContract;
 
 /**
  * 负责处理HomeActivity的业务逻辑和调度HomeActivity和Model
@@ -13,7 +12,7 @@ import javax.inject.Inject;
 public class HomeActivityPresenter implements HomeActivityContract.Presenter {
     private HomeActivityContract.View view;
 
-    @Inject public HomeActivityPresenter(HomeActivityContract.View view) {
+    public HomeActivityPresenter(HomeActivityContract.View view) {
         this.view = view;
     }
 
@@ -22,7 +21,7 @@ public class HomeActivityPresenter implements HomeActivityContract.Presenter {
      */
     @Override
     public void start() {
-
+        Log.i("TAG", "Presenter.start");
     }
 
 }
