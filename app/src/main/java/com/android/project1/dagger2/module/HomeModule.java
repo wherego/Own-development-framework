@@ -1,7 +1,7 @@
 package com.android.project1.dagger2.module;
 
 import com.android.project1.dagger2.scope.ActivityScope;
-import com.android.project1.ui.activity.HomeActivity;
+import com.android.project1.mvp.view.activity.HomeActivity;
 
 import dagger.Module;
 import dagger.Provides;
