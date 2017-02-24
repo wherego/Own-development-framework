@@ -1,9 +1,9 @@
-package com.android.project1.dagger2.component;
+package com.android.project1;
 
 import android.app.Application;
 
 import com.android.project1.dagger2.module.AppModule;
-import com.android.project1.dagger2.module.AppServiceModule;
+import com.android.project1.data.AppServiceModule;
 import com.android.project1.data.api.ApiService;
 import com.android.project1.data.api.ApiServiceModule;
 

@@ -1,4 +1,4 @@
-package com.android.project1.dagger2.scope;
+package com.android.project1.ui.home;
 
 import javax.inject.Scope;
 

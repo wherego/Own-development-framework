@@ -2,8 +2,8 @@ package com.android.project1.ui.home.personal_center;
 
 import android.os.Bundle;
 
+import com.android.project1.AppComponent;
 import com.android.project1.base.LazyFragment;
-import com.android.project1.dagger2.component.AppComponent;
 
 /**
  * 个人中心 Fragment

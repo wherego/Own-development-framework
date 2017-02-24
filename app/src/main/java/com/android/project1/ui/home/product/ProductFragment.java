@@ -2,8 +2,8 @@ package com.android.project1.ui.home.product;
 
 import android.os.Bundle;
 
+import com.android.project1.AppComponent;
 import com.android.project1.base.LazyFragment;
-import com.android.project1.dagger2.component.AppComponent;
 
 /**
  * 产品 Fragment

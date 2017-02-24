@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.android.project1.app.AppApplication;
-import com.android.project1.dagger2.component.AppComponent;
+import com.android.project1.AppApplication;
+import com.android.project1.AppComponent;
 
-import butterknife.ButterKnife;
 
 /**
  * Activity 父类

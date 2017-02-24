@@ -1,7 +1,7 @@
 package com.android.project1.ui.home;
 
-import com.android.project1.dagger2.component.AppComponent;
-import com.android.project1.dagger2.scope.ActivityScope;
+
+import com.android.project1.AppComponent;
 
 import javax.inject.Singleton;
 

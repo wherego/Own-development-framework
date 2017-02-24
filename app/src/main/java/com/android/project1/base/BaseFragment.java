@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.project1.app.AppApplication;
-import com.android.project1.dagger2.component.AppComponent;
+import com.android.project1.AppApplication;
+import com.android.project1.AppComponent;
 
 import java.lang.reflect.Field;
 

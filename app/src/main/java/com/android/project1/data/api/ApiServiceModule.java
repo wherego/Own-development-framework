@@ -2,7 +2,6 @@ package com.android.project1.data.api;
 
 import android.app.Application;
 
-import com.android.project1.data.api.ApiService;
 
 import java.util.concurrent.TimeUnit;
 

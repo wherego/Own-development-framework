@@ -1,10 +1,5 @@
 package com.android.project1.ui.home;
 
-import com.android.project1.dagger2.scope.ActivityScope;
-import com.android.project1.ui.home.HomeActivityContract;
-import com.android.project1.ui.home.HomeActivityPresenter;
-
-
 import dagger.Module;
 import dagger.Provides;
 
