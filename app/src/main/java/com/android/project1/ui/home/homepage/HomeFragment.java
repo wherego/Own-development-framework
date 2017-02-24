@@ -1,4 +1,4 @@
-package com.android.project1.mvp.view.fragment;
+package com.android.project1.ui.home.homepage;
 
 import android.os.Bundle;
 
@@ -6,11 +6,11 @@ import com.android.project1.base.LazyFragment;
 import com.android.project1.dagger2.component.AppComponent;
 
 /**
- * 个人中心 Fragment
+ * 首页 Fragment
  * Created by 赵杰 on 2017/2/23.
  */
 
-public class PersonalCenterFragment extends LazyFragment {
+public class HomeFragment extends LazyFragment {
     @Override
     protected void onCreateViewLazy(Bundle savedInstanceState) {
         super.onCreateViewLazy(savedInstanceState);

@@ -1,4 +1,4 @@
-package com.android.project1.mvp.contract;
+package com.android.project1.ui.home;
 
 import com.android.project1.base.BasePresenter;
 

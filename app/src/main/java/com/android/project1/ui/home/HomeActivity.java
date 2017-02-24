@@ -1,14 +1,10 @@
-package com.android.project1.mvp.view.activity;
+package com.android.project1.ui.home;
 
 import android.os.Bundle;
 
 import com.android.project1.R;
 import com.android.project1.base.BaseActivity;
 import com.android.project1.dagger2.component.AppComponent;
-import com.android.project1.dagger2.component.DaggerHomeComponent;
-import com.android.project1.dagger2.module.HomeContractModule;
-import com.android.project1.mvp.contract.HomeActivityContract;
-import com.android.project1.mvp.presener.HomeActivityPresenter;
 
 import javax.inject.Inject;
 

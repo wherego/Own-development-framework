@@ -1,8 +1,6 @@
-package com.android.project1.mvp.presener;
+package com.android.project1.ui.home;
 
 import android.util.Log;
-
-import com.android.project1.mvp.contract.HomeActivityContract;
 
 /**
  * 负责处理HomeActivity的业务逻辑和调度HomeActivity和Model
