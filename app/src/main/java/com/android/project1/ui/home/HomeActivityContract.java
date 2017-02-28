@@ -11,6 +11,7 @@ public interface HomeActivityContract {
     interface View {
 
     }
+
     interface Presenter extends BasePresenter {
 
     }

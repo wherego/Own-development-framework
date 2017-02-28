@@ -18,7 +18,7 @@ public class HomeActivity extends BaseActivity implements HomeActivityContract.V
     @Inject HomeActivityPresenter presenter;//注入所需要的Presenter
 
     /**
-     * 检查用户登录，软件更新等费时操作交给Presenter来做
+     * 检查用户登录，软件更新等与界面无关的操作交给Presenter来做
      */
     @Override
     protected void onResume() {
