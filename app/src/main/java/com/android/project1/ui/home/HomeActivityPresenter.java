@@ -10,7 +10,7 @@ import android.util.Log;
 public class HomeActivityPresenter implements HomeActivityContract.Presenter {
     private HomeActivityContract.View view;
 
-    public HomeActivityPresenter(HomeActivityContract.View view) {
+    public HomeActivityPresenter(HomeActivityContract.View view) {//在HomeContractModule进行注入
         this.view = view;
     }
 

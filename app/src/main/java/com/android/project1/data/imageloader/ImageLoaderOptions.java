@@ -3,6 +3,7 @@ package com.android.project1.data.imageloader;
 import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 
 /**
+ * Glide的设置项
  * Created by 赵杰 on 2017/2/28.
  */
 
@@ -15,14 +16,37 @@ public class ImageLoaderOptions {
     public boolean isSkipMemoryCache = false; //是否跳过内存缓存
     public ViewPropertyAnimation.Animator animator = null; // 图片加载动画
 
+    public ImageLoaderOptions() {
+    }
 
-    private ImageLoaderOptions(ImageReSize resize, int placeHolder, int errorDrawable, boolean isCrossFade, boolean isSkipMemoryCache, ViewPropertyAnimation.Animator animator) {
+    public ImageLoaderOptions setPlaceHolder(int placeHolder) {
         this.placeHolder = placeHolder;
-        this.size = resize;
+        return this;
+    }
+
+    public ImageLoaderOptions setSize(ImageReSize size) {
+        this.size = size;
+        return this;
+    }
+
+    public ImageLoaderOptions setErrorDrawable(int errorDrawable) {
         this.errorDrawable = errorDrawable;
-        this.isCrossFade = isCrossFade;
-        this.isSkipMemoryCache = isSkipMemoryCache;
+        return this;
+    }
+
+    public ImageLoaderOptions setCrossFade(boolean crossFade) {
+        isCrossFade = crossFade;
+        return this;
+    }
+
+    public ImageLoaderOptions setSkipMemoryCache(boolean skipMemoryCache) {
+        isSkipMemoryCache = skipMemoryCache;
+        return this;
+    }
+
+    public ImageLoaderOptions setAnimator(ViewPropertyAnimation.Animator animator) {
         this.animator = animator;
+        return this;
     }
 
     public int getPlaceHolder() {
@@ -67,51 +91,4 @@ public class ImageLoaderOptions {
 
     }
 
-    public static final class Builder {
-        private int placeHolder = -1;
-        private ImageReSize size = null;
-        private int errorDrawable = -1;
-        private boolean isCrossFade = false;
-        private boolean isSkipMemoryCache = false;
-        private ViewPropertyAnimation.Animator animator = null;
-
-        public Builder() {
-
-        }
-
-        public Builder placeHolder(int drawable) {
-            this.placeHolder = drawable;
-            return this;
-        }
-
-        public Builder reSize(ImageReSize size) {
-            this.size = size;
-            return this;
-        }
-
-        public Builder anmiator(ViewPropertyAnimation.Animator animator) {
-            this.animator = animator;
-            return this;
-        }
-
-        public Builder errorDrawable(int errorDrawable) {
-            this.errorDrawable = errorDrawable;
-            return this;
-        }
-
-        public Builder isCrossFade(boolean isCrossFade) {
-            this.isCrossFade = isCrossFade;
-            return this;
-        }
-
-        public Builder isSkipMemoryCache(boolean isSkipMemoryCache) {
-            this.isSkipMemoryCache = isSkipMemoryCache;
-            return this;
-        }
-
-        public ImageLoaderOptions build() {
-
-            return new ImageLoaderOptions(this.size, this.placeHolder, this.errorDrawable, this.isCrossFade, this.isSkipMemoryCache, this.animator);
-        }
-    }
 }

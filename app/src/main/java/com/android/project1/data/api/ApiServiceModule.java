@@ -3,6 +3,8 @@ package com.android.project1.data.api;
 import android.app.Application;
 
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
@@ -41,6 +43,7 @@ public class ApiServiceModule {
         return new Retrofit.Builder()
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
                 .create(ApiService.class);
