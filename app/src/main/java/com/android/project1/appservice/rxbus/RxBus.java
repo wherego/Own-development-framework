@@ -1,4 +1,4 @@
-package com.android.project1.rxbus;
+package com.android.project1.appservice.rxbus;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -15,7 +15,8 @@ import io.reactivex.subjects.PublishSubject;
 import io.reactivex.subjects.Subject;
 
 /**
- * 对RxJava2的RxBus的简单封装
+ * 基于RxJava2针对Android优化的发布/订阅事件总线
+ * 替代EventBus
  * Created by oaier on 2017/3/7.
  */
 

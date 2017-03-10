@@ -2,14 +2,13 @@ package com.android.project1;
 
 import android.app.Application;
 
-import com.android.project1.broadcast.NetworkChangeReceiver;
-import com.android.project1.dagger2.module.AppModule;
-import com.android.project1.data.AppServiceModule;
-import com.android.project1.data.api.ApiService;
-import com.android.project1.data.api.ApiServiceModule;
-import com.android.project1.data.imageloader.GlideImageLoaderStrategy;
-import com.android.project1.data.imageloader.ImageLoaderOptions;
-import com.android.project1.rxbus.RxBus;
+import com.android.project1.appservice.broadcast.NetworkChangeReceiver;
+import com.android.project1.appservice.rxbus.RxBus;
+import com.android.project1.appservice.AppServiceModule;
+import com.android.project1.appservice.api.ApiService;
+import com.android.project1.appservice.api.ApiServiceModule;
+import com.android.project1.appservice.imageloader.GlideImageLoaderStrategy;
+import com.android.project1.appservice.imageloader.ImageLoaderOptions;
 
 import javax.inject.Singleton;
 

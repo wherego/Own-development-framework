@@ -4,9 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 
-import com.android.project1.dagger2.module.AppModule;
-import com.android.project1.data.AppServiceModule;
-import com.android.project1.data.api.ApiServiceModule;
+import com.android.project1.appservice.AppServiceModule;
+import com.android.project1.appservice.api.ApiServiceModule;
 
 /**
  * 全局Application

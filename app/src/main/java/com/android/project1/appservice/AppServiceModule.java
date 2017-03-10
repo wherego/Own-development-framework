@@ -1,9 +1,9 @@
-package com.android.project1.data;
+package com.android.project1.appservice;
 
-import com.android.project1.broadcast.NetworkChangeReceiver;
-import com.android.project1.data.imageloader.GlideImageLoaderStrategy;
-import com.android.project1.data.imageloader.ImageLoaderOptions;
-import com.android.project1.rxbus.RxBus;
+import com.android.project1.appservice.broadcast.NetworkChangeReceiver;
+import com.android.project1.appservice.rxbus.RxBus;
+import com.android.project1.appservice.imageloader.GlideImageLoaderStrategy;
+import com.android.project1.appservice.imageloader.ImageLoaderOptions;
 
 import javax.inject.Singleton;
 
@@ -16,18 +16,31 @@ import dagger.Provides;
 @Module
 public class AppServiceModule {
 
+    /**
+     * @return Glide封装类
+     */
     @Provides @Singleton GlideImageLoaderStrategy provideGlideStrategy(){
         return new GlideImageLoaderStrategy();
     }
 
+    /**
+     * @return Glide设置项
+     */
     @Provides @Singleton ImageLoaderOptions provideImageLoaderOption() {
         return new ImageLoaderOptions();
     }
 
+    /**
+     * @return RxBus
+     */
     @Provides @Singleton RxBus provideRxbusInstance() {
         return new RxBus();
     }
 
+    /**
+     * @param rxBus
+     * @return 检测网络状态的广播
+     */
     @Provides @Singleton NetworkChangeReceiver provideNetworkChangeReceiver(RxBus rxBus) {
         return new NetworkChangeReceiver(rxBus);
     }

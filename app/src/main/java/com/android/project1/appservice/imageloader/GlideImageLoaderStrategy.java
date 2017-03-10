@@ -1,4 +1,4 @@
-package com.android.project1.data.imageloader;
+package com.android.project1.appservice.imageloader;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,7 +7,7 @@ import com.bumptech.glide.DrawableTypeRequest;
 import com.bumptech.glide.Glide;
 
 /**
- * 封装Glide
+ * 对Glide的简单封装
  * Created by 赵杰 on 2017/2/28.
  */
 

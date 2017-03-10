@@ -3,18 +3,17 @@ package com.android.project1.ui.home;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.project1.AppComponent;
 import com.android.project1.R;
+import com.android.project1.appservice.broadcast.NetworkChangeReceiver;
+import com.android.project1.appservice.rxbus.RxBus;
 import com.android.project1.base.BaseActivity;
-import com.android.project1.broadcast.NetworkChangeReceiver;
-import com.android.project1.data.imageloader.GlideImageLoaderStrategy;
-import com.android.project1.data.imageloader.ImageLoaderOptions;
-import com.android.project1.rxbus.RxBus;
+import com.android.project1.appservice.imageloader.GlideImageLoaderStrategy;
+import com.android.project1.appservice.imageloader.ImageLoaderOptions;
 
 import javax.inject.Inject;
 
@@ -30,10 +29,8 @@ import io.reactivex.functions.Consumer;
  * WeChat zqx0000
  */
 
-public class HomeActivity extends BaseActivity implements HomeActivityContract.View {
+public class HomeActivity extends BaseActivity{
 
-    @Inject
-    HomeActivityPresenter presenter;//注入所需要的Presenter
     @Inject
     GlideImageLoaderStrategy glideImageLoaderStrategy;
     @Inject
@@ -57,12 +54,11 @@ public class HomeActivity extends BaseActivity implements HomeActivityContract.V
     private Disposable disposable;
 
     /**
-     * 检查用户登录，软件更新等与界面无关的操作交给Presenter来做
+     * 检查用户登录，软件更新等
      */
     @Override
     protected void onResume() {
         super.onResume();
-        presenter.start();
     }
 
     @Override
@@ -103,7 +99,6 @@ public class HomeActivity extends BaseActivity implements HomeActivityContract.V
     protected void setupActivityComponent(AppComponent appComponent) {
         DaggerHomeComponent.builder()
                 .appComponent(appComponent)
-                .homeContractModule(new HomeContractModule(this))
                 .build()
                 .inject(this);
     }

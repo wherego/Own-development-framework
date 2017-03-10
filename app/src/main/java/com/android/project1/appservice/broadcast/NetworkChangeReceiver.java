@@ -1,4 +1,4 @@
-package com.android.project1.broadcast;
+package com.android.project1.appservice.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.android.project1.rxbus.RxBus;
+import com.android.project1.appservice.rxbus.RxBus;
+
 
 /**
  * 检测网络状态的广播

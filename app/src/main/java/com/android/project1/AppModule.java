@@ -1,4 +1,4 @@
-package com.android.project1.dagger2.module;
+package com.android.project1;
 
 import android.app.Application;
 
